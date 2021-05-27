@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to bottom, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.wave-hand {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.wave-hand {
+    animation-name: wave-animation;  
+    animation-duration: 2.5s;      
+    animation-iteration-count: infinite;  
+    transform-origin: 70% 70%;   
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) } 
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }
+    100% { transform: rotate( 0.0deg) }
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #e58e26;
+    border-color: #e58e26;
+  }
+  .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    color: #fff;
+    background-color: #c4781c;
+    border-color: #c4781c;
+	}

@@ -1,3 +1,4 @@
+/* start:sidenav */
 .sidenav {
     height: 100%;
     width: 0;
@@ -36,11 +37,22 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+/* end:sidenav */
+
+/* start:custom-card */
+  .custom-card {
+    background-color: #fff;
+    margin: 0 auto;
+    display: table;
+    box-shadow: 10px 10px 5px grey !important;
+  }
+/* end:custom-card */
 
   .topnav {
     overflow: hidden;
     background-color: #e9e9e9;
   }
+
   
   .btn2{
       
@@ -74,10 +86,3 @@
   tr:nth-child(even) {
     background-color: #dddddd;
   }
-
-  .interface{
-  display: table;
-  margin: 0px auto;
-  box-shadow: 10px 10px 5px grey !important;
-}
-

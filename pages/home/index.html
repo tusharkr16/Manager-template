@@ -10,24 +10,36 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
 		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="../../global.css">
 	<link rel="stylesheet" href="./index.css">
-	<script src="./index.js"></script>
 
 	<title>Manager Template</title>
 </head>
 
 <body>
-	<nav class="navbar navbar-light bg-light">
-		<div class="container-fluid">
-		  <a class="navbar-brand" href="#">Manager</a>
-		  <input class="form-control me-2 search-input" type="text" placeholder="Search" aria-label="Search">
+
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+		</div>
+		<div>
+			<a class="navbar-brand position-absolute top-0 start-0 fs-3" href="#">Manager</a>
+			<input class="form-control me-2 search-input float-end" type="text" placeholder="Search" aria-label="Search">
 		</div>
 	  </nav>
 
 
-	<div id="mySidenav" class="sidenav">
+	<div id="mySidenav" class="sidenav expand-sm">
+		<a href="javascript:void(0)" class="closebtn mb-3" onclick="closeNav()">&times;</a>
 		<a href="#">About</a>
 		<a href="#">Services</a>
 		<a href="#">Clients</a>
@@ -35,48 +47,46 @@
 	</div>
 
 	<div class="container">
-		<div class="custom-card p-5 mt-5">
+		<div class="custom-card p-5 mt-5 table-responsive-sm">
 			<h2 class="mb-3">Management Data</h2>
-			<table>
+			<table id="table">
 				<tr>
 					<th>Company</th>
 					<th>Contact</th>
 					<th>Country</th>
+					<th>Action</th>
 				</tr>
-				<tr>
-					<td>Alfreds Futterkiste</td>
-					<td>Maria Anders</td>
-					<td>Germany</td>
-				</tr>
-				<tr>
-					<td>Centro comercial Moctezuma</td>
-					<td>Francisco Chang</td>
-					<td>Mexico</td>
-				</tr>
-				<tr>
-					<td>Ernst Handel</td>
-					<td>Roland Mendel</td>
-					<td>Austria</td>
-				</tr>
-				<tr>
-					<td>Island Trading</td>
-					<td>Helen Bennett</td>
-					<td>UK</td>
-				</tr>
-				<tr>
-					<td>Laughing Bacchus Winecellars</td>
-					<td>Yoshi Tannamuri</td>
-					<td>Canada</td>
-				</tr>
-				<tr>
-					<td>Magazzini Alimentari Riuniti</td>
-					<td>Giovanni Rovelli</td>
-					<td>Italy</td>
-				</tr>
+
+				<button data-target="#mymodal" data-toggle="modal" class="btn btn-success shadow mb-2">Add New
+					data</button>
 			</table>
 		</div>
 	</div>
+	<div class="container" id="six">
+		<div class="modal" id="mymodal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="text-primary">Please Input Your Data</h3>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<input type="text" name="Compname" placeholder="Company Name" id="companyname">
+						<input type="text" name="Contname" placeholder="Country" id="contactname">
+						<input type="text" name="Countname" placeholder="Contact" id="countryname">
+						<button type="button " class="btn btn-success ms-3 shadow me-2"
+							onclick="addHTMLtable()">Add</button>
+						<button type="button" class="btn btn-warning shadow me-2" onclick="save()">Save</button>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
 
 </body>
+<script src="./index.js"></script>
 
 </html>

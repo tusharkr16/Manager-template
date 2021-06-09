@@ -25,4 +25,68 @@
     100% { transform: rotate( 0.0deg) }
   }
 
+<<<<<<< Updated upstream
   
+=======
+  .btn-primary {
+    color: #fff;
+    background-color: #e58e26;
+    border-color: #e58e26;
+  }
+  .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    color: #fff;
+    background-color: #c4781c;
+    border-color: #c4781c;
+	}
+
+  
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.sidenav a:hover {
+  color: white;
+  
+}
+
+.navContainer{
+  margin-top: 46px;
+}
+.d-flex{
+  position: absolute;
+  top: 3px;
+  left: 600px;
+  width: 35px;
+}
+>>>>>>> Stashed changes
